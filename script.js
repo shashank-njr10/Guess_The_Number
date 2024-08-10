@@ -17,8 +17,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').style.width = '30rem';
     document.querySelector('.number').textContent = secret_number;
 
-    if(score > highscore)
-    {
+    if (score > highscore) {
       highscore = score;
       document.querySelector('.highscore').textContent = highscore;
     }
@@ -47,12 +46,13 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+//resetting the game using again button
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secret_number = Math.trunc(Math.random() * 20) + 1; // Reassign the secret number
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = score;
-  document.querySelector('.number').textContent = '?';
+  document.querySelector('.number').textContent = '??';
   document.querySelector('.guess').value = ''; // Clear the input field
   document.querySelector('.number').style.width = '15rem';
   document.querySelector('body').style.backgroundColor = '#222'; // Reset the background color
