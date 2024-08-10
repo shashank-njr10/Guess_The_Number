@@ -46,7 +46,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
-//resetting the game using again button
+//resetting the game using again button .
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   secret_number = Math.trunc(Math.random() * 20) + 1; // Reassign the secret number
